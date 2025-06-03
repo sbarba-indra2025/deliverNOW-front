@@ -1,0 +1,19 @@
+/* .App {
+  text-align: center;
+} */
+
+.main-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.start-button,
+.login-button {
+  margin-left: 15; 
+  background-color: #e07a5f;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}

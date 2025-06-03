@@ -1,0 +1,145 @@
+.order-container {
+  background: white;
+  max-width: 420px;
+  margin: 30px auto;
+  padding: 35px 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.order-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #6a2c70;
+  letter-spacing: 1.5px;
+}
+
+.step-container p {
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.btn-group {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.btn-group button {
+  background: #d7c0e0;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: #6a2c70;
+  box-shadow: 0 3px 8px rgba(106, 44, 112, 0.3);
+}
+
+.btn-group button:hover {
+  background: #b490ca;
+  color: white;
+}
+
+.btn-group button.active {
+  background: #6a2c70;
+  color: white;
+  box-shadow: 0 4px 14px rgba(106, 44, 112, 0.6);
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.list li {
+  background: #f3eafa;
+  margin-bottom: 12px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #6a2c70;
+  box-shadow: 0 3px 8px rgba(106, 44, 112, 0.15);
+  transition: background-color 0.3s ease;
+}
+
+.list li:hover {
+  background: #b490ca;
+  color: white;
+}
+
+.list li.selected {
+  background: #6a2c70;
+  color: white;
+  box-shadow: 0 4px 14px rgba(106, 44, 112, 0.6);
+}
+
+.productos-list li {
+  padding: 8px 0;
+  cursor: default;
+  font-weight: 500;
+  color: #333;
+}
+
+.productos-list label {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.productos-list input[type="checkbox"] {
+  margin-right: 15px;
+  width: 18px;
+  height: 18px;
+  accent-color: #6a2c70;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.actions button {
+  padding: 12px 25px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cancel-btn {
+  background: #e07a5f;
+  color: white;
+  box-shadow: 0 3px 8px rgba(224, 122, 95, 0.5);
+}
+
+.cancel-btn:hover {
+  background: #bc5841;
+}
+
+.actions button:not(.cancel-btn) {
+  background: #6a2c70;
+  color: white;
+  box-shadow: 0 4px 14px rgba(106, 44, 112, 0.6);
+}
+
+.actions button:not(.cancel-btn):hover:enabled {
+  background: #b490ca;
+}
