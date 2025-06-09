@@ -39,9 +39,9 @@ Para ejecutar el frontend de forma individual, se pueden seguir estos pasos:
   
 3. **Levantar el servidor de desarrollo**:
 
-  ```bash
-  npm start
-  ```
+   ```bash
+   npm start
+   ```
 
 Esto iniciará el servidor en http://localhost:3000.
 
