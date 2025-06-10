@@ -3,7 +3,7 @@ import './OrderForm.css';
 import { useState } from 'react';
 
 
-export default function OrderForm({ onCancel }) {
+export default function OrderForm({ onCancel, usuarioId, onPedidoCreated }) {
   const [step, setStep] = useState(1); // pasos del formulario
   const [categoria, setCategoria] = useState('');
   const [proveedores, setProveedores] = useState([]);
@@ -30,7 +30,6 @@ export default function OrderForm({ onCancel }) {
         .catch((err) => {
           console.error('Error al cargar proveedores', err);
         });
-    };
   };
 
   // Paso 2: carga productos del proveedor seleccionado
@@ -72,8 +71,9 @@ export default function OrderForm({ onCancel }) {
     // pedido con los datos seleccionados
     const pedido = {
       categoria,
-      proveedor: proveedorSeleccionado,
-      productos: Object.values(productosSeleccionados)
+      proveedorId: proveedorSeleccionado.id,
+      productosIds: Object.keys(productosSeleccionados).map((key) => parseInt(key)),
+      usuarioId
     };
 
     // realiza la petición POST al backend para guardar el pedido
@@ -87,8 +87,7 @@ export default function OrderForm({ onCancel }) {
     .then((res) => res.json())
     .then((data) => {
       alert('Pedido generado');
-      // limpiar los campos
-      // redirigir al usuario
+      onPedidoCreated(data);
     })
     .catch((err) => {
       console.error('Error al enviar el pedido', err);

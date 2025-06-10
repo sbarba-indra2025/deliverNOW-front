@@ -17,14 +17,14 @@ RUN npm run build
 
 # -----------------------------------------
 
-# prueba para servir la aplicación con un servidor estático
+# para servir la aplicación con un servidor estático
 FROM nginx:alpine
 
 # copia la app
 COPY --from=build /app/build /usr/share/nginx/html
 
-# exponer el puerto para nginx
+# expone el puerto para nginx
 EXPOSE 80
 
-# Iniciar nginx para servir la aplicación
+# inicia nginx para servir la aplicación
 CMD ["nginx", "-g", "daemon off;"]
